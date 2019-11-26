@@ -1257,28 +1257,6 @@ Grid 2.54 mm&lt;p&gt;
 <text x="-7.874" y="1.778" size="1.27" layer="25">&gt;NAME</text>
 <text x="-7.874" y="-3.048" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="4POL254" urn="urn:adsk.eagle:footprint:9307/1" library_version="1">
-<description>&lt;b&gt;PHOENIX CONNECTOR&lt;/b&gt;</description>
-<wire x1="-5.21" y1="-1.45" x2="5.21" y2="-1.45" width="0.254" layer="21"/>
-<wire x1="5.21" y1="-1.45" x2="5.21" y2="1.45" width="0.254" layer="21"/>
-<wire x1="5.21" y1="1.45" x2="-5.21" y2="1.45" width="0.254" layer="21"/>
-<wire x1="-5.21" y1="1.45" x2="-5.21" y2="-1.45" width="0.254" layer="21"/>
-<wire x1="-5.1" y1="1.1" x2="5.1" y2="1.1" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="-0.508" x2="-3.302" y2="0.635" width="0.1524" layer="51"/>
-<wire x1="-2.032" y1="-0.254" x2="-0.508" y2="0.127" width="0.1524" layer="51"/>
-<wire x1="0.762" y1="0.635" x2="1.778" y2="-0.635" width="0.1524" layer="51"/>
-<wire x1="3.048" y1="0.381" x2="4.572" y2="-0.381" width="0.1524" layer="51"/>
-<circle x="-3.81" y="0" radius="0.889" width="0.1524" layer="51"/>
-<circle x="-1.27" y="0" radius="0.889" width="0.1524" layer="51"/>
-<circle x="1.27" y="0" radius="0.889" width="0.1524" layer="51"/>
-<circle x="3.81" y="0" radius="0.889" width="0.1524" layer="51"/>
-<pad name="1" x="-3.81" y="0" drill="1.2" shape="long" rot="R90"/>
-<pad name="2" x="-1.27" y="0" drill="1.2" shape="long" rot="R90"/>
-<pad name="3" x="1.27" y="0" drill="1.2" shape="long" rot="R90"/>
-<pad name="4" x="3.81" y="0" drill="1.2" shape="long" rot="R90"/>
-<text x="-5.334" y="1.778" size="1.27" layer="25">&gt;NAME</text>
-<text x="-5.334" y="-3.048" size="1.27" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 <packages3d>
 <package3d name="3POL254" urn="urn:adsk.eagle:package:9316/1" type="box" library_version="1">
@@ -1303,12 +1281,6 @@ Grid 2.54 mm&lt;p&gt;
 <description>PHOENIX CONNECTOR</description>
 <packageinstances>
 <packageinstance name="6POL254"/>
-</packageinstances>
-</package3d>
-<package3d name="4POL254" urn="urn:adsk.eagle:package:9326/1" type="box" library_version="1">
-<description>PHOENIX CONNECTOR</description>
-<packageinstances>
-<packageinstance name="4POL254"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1442,36 +1414,6 @@ Grid 2.54 mm&lt;p&gt;
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:9318/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MPT4" urn="urn:adsk.eagle:component:9333/1" prefix="X" uservalue="yes" library_version="1">
-<description>&lt;b&gt;PHOENIX CONNECTOR&lt;/b&gt;</description>
-<gates>
-<gate name="-1" symbol="SKB" x="0" y="10.16" addlevel="always"/>
-<gate name="-2" symbol="SKB" x="0" y="5.08" addlevel="always"/>
-<gate name="-3" symbol="SKB" x="0" y="0" addlevel="always"/>
-<gate name="-4" symbol="SKBV" x="0" y="-5.08" addlevel="always"/>
-</gates>
-<devices>
-<device name="" package="4POL254">
-<connects>
-<connect gate="-1" pin="1" pad="1"/>
-<connect gate="-2" pin="1" pad="2"/>
-<connect gate="-3" pin="1" pad="3"/>
-<connect gate="-4" pin="1" pad="4"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9326/1"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -12155,29 +12097,31 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <part name="IC2" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*595" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="HC" value="74HC595N"/>
 <part name="RFID" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT8" device="" package3d_urn="urn:adsk.eagle:package:9329/1"/>
 <part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1"/>
-<part name="AGND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="AGND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="$1_6_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="$1_3_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E7.5-16" package3d_urn="urn:adsk.eagle:package:23382/2"/>
-<part name="R_S_D" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1"/>
-<part name="TT" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1"/>
-<part name="AGND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="L_V_T_O" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT6" device="" package3d_urn="urn:adsk.eagle:package:9318/1"/>
-<part name="FREI" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT4" device="" package3d_urn="urn:adsk.eagle:package:9326/1"/>
-<part name="AGND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="R_TÜR" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1"/>
+<part name="TÜR_TER." library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1"/>
+<part name="$1_7_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="L_TÜR" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT6" device="" package3d_urn="urn:adsk.eagle:package:9318/1"/>
+<part name="$1_1_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="SV2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA08-1" device="" package3d_urn="urn:adsk.eagle:package:8343/1"/>
 <part name="SV3" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA08-1" device="" package3d_urn="urn:adsk.eagle:package:8343/1"/>
-<part name="AGND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="$1_0_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="24V" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
-<part name="Q1" library="FDN5632N-F085" deviceset="FDN5632N-F085" device=""/>
 <part name="Q2" library="FDN5632N-F085" deviceset="FDN5632N-F085" device=""/>
+<part name="Q1" library="FDN5632N-F085" deviceset="FDN5632N-F085" device=""/>
 <part name="R1" library="CommonParts" deviceset="R-EU_805" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="220 ohm"/>
 <part name="R2" library="CommonParts" deviceset="R-EU_805" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="220 ohm"/>
-<part name="AGND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
-<part name="AGND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="$1_4_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="$1_5_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="SUMMER" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1" value="1 is V &amp; 2 is Gnd"/>
 <part name="POWER_LED" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1" value="1 is V &amp; 2 is Gnd "/>
 <part name="ETH_SD" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1"/>
 <part name="RANDOM" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT6" device="" package3d_urn="urn:adsk.eagle:package:9318/1"/>
+<part name="FREI" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT6" device="" package3d_urn="urn:adsk.eagle:package:9318/1"/>
+<part name="$1_2_$_2019-11-26_22-56-04" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="$1_1_$_2019-11-26_22-56-01" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12234,66 +12178,53 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <attribute name="VALUE" x="105.41" y="50.8" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="105.41" y="37.338" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="AGND1" gate="VR1" x="172.72" y="7.62" smashed="yes">
+<instance part="$1_6_$_2019-11-26_22-56-04" gate="VR1" x="172.72" y="7.62" smashed="yes">
 <attribute name="VALUE" x="170.18" y="5.08" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="AGND2" gate="VR1" x="99.06" y="60.96" smashed="yes">
+<instance part="$1_3_$_2019-11-26_22-56-04" gate="VR1" x="99.06" y="60.96" smashed="yes">
 <attribute name="VALUE" x="96.52" y="55.88" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C1" gate="G$1" x="195.58" y="106.68" smashed="yes" rot="R180">
 <attribute name="NAME" x="194.437" y="106.1974" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="194.437" y="111.2774" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R_S_D" gate="-1" x="160.02" y="127" smashed="yes" rot="R180">
+<instance part="R_TÜR" gate="-1" x="160.02" y="127" smashed="yes" rot="R180">
 <attribute name="NAME" x="156.464" y="127.635" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="R_S_D" gate="-2" x="160.02" y="132.08" smashed="yes" rot="R180">
+<instance part="R_TÜR" gate="-2" x="160.02" y="132.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="156.464" y="132.715" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="161.036" y="135.382" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="TT" gate="-1" x="160.02" y="139.7" smashed="yes" rot="R180">
+<instance part="TÜR_TER." gate="-1" x="160.02" y="139.7" smashed="yes" rot="R180">
 <attribute name="NAME" x="156.464" y="140.335" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="TT" gate="-2" x="160.02" y="144.78" smashed="yes" rot="R180">
+<instance part="TÜR_TER." gate="-2" x="160.02" y="144.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="156.464" y="145.415" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="161.036" y="148.082" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="AGND3" gate="VR1" x="187.96" y="116.84" smashed="yes">
+<instance part="$1_7_$_2019-11-26_22-56-04" gate="VR1" x="187.96" y="116.84" smashed="yes">
 <attribute name="VALUE" x="185.42" y="111.76" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="L_V_T_O" gate="-1" x="38.1" y="144.78" smashed="yes">
+<instance part="L_TÜR" gate="-1" x="38.1" y="144.78" smashed="yes">
 <attribute name="NAME" x="41.656" y="144.145" size="1.778" layer="95"/>
 </instance>
-<instance part="L_V_T_O" gate="-2" x="38.1" y="139.7" smashed="yes">
+<instance part="L_TÜR" gate="-2" x="38.1" y="139.7" smashed="yes">
 <attribute name="NAME" x="41.656" y="139.065" size="1.778" layer="95"/>
 </instance>
-<instance part="L_V_T_O" gate="-3" x="38.1" y="134.62" smashed="yes">
+<instance part="L_TÜR" gate="-3" x="38.1" y="134.62" smashed="yes">
 <attribute name="NAME" x="41.656" y="133.985" size="1.778" layer="95"/>
 </instance>
-<instance part="L_V_T_O" gate="-4" x="38.1" y="129.54" smashed="yes">
+<instance part="L_TÜR" gate="-4" x="38.1" y="129.54" smashed="yes">
 <attribute name="NAME" x="41.656" y="128.905" size="1.778" layer="95"/>
 </instance>
-<instance part="L_V_T_O" gate="-5" x="38.1" y="124.46" smashed="yes">
+<instance part="L_TÜR" gate="-5" x="38.1" y="124.46" smashed="yes">
 <attribute name="NAME" x="41.656" y="123.825" size="1.778" layer="95"/>
 </instance>
-<instance part="L_V_T_O" gate="-6" x="38.1" y="119.38" smashed="yes">
+<instance part="L_TÜR" gate="-6" x="38.1" y="119.38" smashed="yes">
 <attribute name="NAME" x="41.656" y="118.745" size="1.778" layer="95"/>
 <attribute name="VALUE" x="37.084" y="116.078" size="1.778" layer="96"/>
 </instance>
-<instance part="FREI" gate="-1" x="38.1" y="88.9" smashed="yes">
-<attribute name="NAME" x="41.656" y="88.265" size="1.778" layer="95"/>
-</instance>
-<instance part="FREI" gate="-2" x="38.1" y="83.82" smashed="yes">
-<attribute name="NAME" x="41.656" y="83.185" size="1.778" layer="95"/>
-</instance>
-<instance part="FREI" gate="-3" x="38.1" y="78.74" smashed="yes">
-<attribute name="NAME" x="41.656" y="78.105" size="1.778" layer="95"/>
-</instance>
-<instance part="FREI" gate="-4" x="38.1" y="73.66" smashed="yes">
-<attribute name="NAME" x="41.656" y="73.025" size="1.778" layer="95"/>
-<attribute name="VALUE" x="37.084" y="70.358" size="1.778" layer="96"/>
-</instance>
-<instance part="AGND4" gate="VR1" x="20.32" y="119.38" smashed="yes" rot="R270">
+<instance part="$1_1_$_2019-11-26_22-56-04" gate="VR1" x="20.32" y="119.38" smashed="yes" rot="R270">
 <attribute name="VALUE" x="15.24" y="121.92" size="1.778" layer="96"/>
 </instance>
 <instance part="SV2" gate="1" x="43.18" y="38.1" smashed="yes" rot="R180">
@@ -12304,7 +12235,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <attribute name="VALUE" x="49.53" y="22.86" size="1.778" layer="96"/>
 <attribute name="NAME" x="49.53" y="49.022" size="1.778" layer="95"/>
 </instance>
-<instance part="AGND5" gate="VR1" x="17.78" y="55.88" smashed="yes" rot="R180">
+<instance part="$1_0_$_2019-11-26_22-56-04" gate="VR1" x="17.78" y="55.88" smashed="yes" rot="R180">
 <attribute name="VALUE" x="20.32" y="60.96" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="24V" gate="-1" x="15.24" y="160.02" smashed="yes" rot="R90">
@@ -12314,11 +12245,11 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <attribute name="NAME" x="19.431" y="158.75" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="24.003" y="156.21" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="Q1" gate="G$1" x="165.1" y="162.56" smashed="yes">
+<instance part="Q2" gate="G$1" x="165.1" y="162.56" smashed="yes">
 <attribute name="NAME" x="176.53" y="166.37" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="176.53" y="163.83" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="Q2" gate="G$1" x="111.76" y="162.56" smashed="yes">
+<instance part="Q1" gate="G$1" x="111.76" y="162.56" smashed="yes">
 <attribute name="NAME" x="123.19" y="166.37" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="123.19" y="163.83" size="1.778" layer="96" align="center-left"/>
 </instance>
@@ -12330,10 +12261,10 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <attribute name="NAME" x="153.67" y="164.0586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="153.67" y="159.258" size="1.778" layer="96"/>
 </instance>
-<instance part="AGND8" gate="VR1" x="119.38" y="152.4" smashed="yes">
+<instance part="$1_4_$_2019-11-26_22-56-04" gate="VR1" x="119.38" y="152.4" smashed="yes">
 <attribute name="VALUE" x="116.84" y="149.86" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="AGND9" gate="VR1" x="172.72" y="152.4" smashed="yes">
+<instance part="$1_5_$_2019-11-26_22-56-04" gate="VR1" x="172.72" y="152.4" smashed="yes">
 <attribute name="VALUE" x="170.18" y="149.86" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="SUMMER" gate="-1" x="121.92" y="180.34" smashed="yes">
@@ -12375,6 +12306,31 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <instance part="RANDOM" gate="-6" x="55.88" y="172.72" smashed="yes" rot="R270">
 <attribute name="NAME" x="55.245" y="169.164" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="52.578" y="173.736" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="FREI" gate="-1" x="38.1" y="101.6" smashed="yes">
+<attribute name="NAME" x="41.656" y="100.965" size="1.778" layer="95"/>
+</instance>
+<instance part="FREI" gate="-2" x="38.1" y="96.52" smashed="yes">
+<attribute name="NAME" x="41.656" y="95.885" size="1.778" layer="95"/>
+</instance>
+<instance part="FREI" gate="-3" x="38.1" y="91.44" smashed="yes">
+<attribute name="NAME" x="41.656" y="90.805" size="1.778" layer="95"/>
+</instance>
+<instance part="FREI" gate="-4" x="38.1" y="86.36" smashed="yes">
+<attribute name="NAME" x="41.656" y="85.725" size="1.778" layer="95"/>
+</instance>
+<instance part="FREI" gate="-5" x="38.1" y="81.28" smashed="yes">
+<attribute name="NAME" x="41.656" y="80.645" size="1.778" layer="95"/>
+</instance>
+<instance part="FREI" gate="-6" x="38.1" y="76.2" smashed="yes">
+<attribute name="NAME" x="41.656" y="75.565" size="1.778" layer="95"/>
+<attribute name="VALUE" x="37.084" y="72.898" size="1.778" layer="96"/>
+</instance>
+<instance part="$1_2_$_2019-11-26_22-56-04" gate="VR1" x="33.02" y="68.58" smashed="yes">
+<attribute name="VALUE" x="30.48" y="63.5" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="$1_1_$_2019-11-26_22-56-01" gate="VR1" x="45.72" y="190.5" smashed="yes" rot="R270">
+<attribute name="VALUE" x="40.64" y="193.04" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -12517,7 +12473,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <label x="104.14" y="132.08" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="L_V_T_O" gate="-4" pin="1"/>
+<pinref part="L_TÜR" gate="-4" pin="1"/>
 <wire x1="35.56" y1="129.54" x2="33.02" y2="129.54" width="0.1524" layer="91"/>
 <label x="33.02" y="129.54" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12534,7 +12490,12 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <segment>
 <wire x1="35.56" y1="124.46" x2="33.02" y2="124.46" width="0.1524" layer="91"/>
 <label x="33.02" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="L_V_T_O" gate="-5" pin="1"/>
+<pinref part="L_TÜR" gate="-5" pin="1"/>
+</segment>
+<segment>
+<pinref part="FREI" gate="-5" pin="1"/>
+<wire x1="35.56" y1="81.28" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
+<label x="33.02" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -12560,7 +12521,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <segment>
 <pinref part="RFID" gate="-8" pin="1"/>
 <wire x1="162.56" y1="63.5" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="AGND1" gate="VR1" pin="AGND"/>
+<pinref part="$1_6_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
 <pinref part="RFID" gate="-7" pin="1"/>
 <wire x1="172.72" y1="63.5" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="50.8" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
@@ -12592,51 +12553,63 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <wire x1="104.14" y1="68.58" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
 <junction x="99.06" y="66.04"/>
-<pinref part="AGND2" gate="VR1" pin="AGND"/>
+<pinref part="$1_3_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
 <wire x1="99.06" y1="66.04" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R_S_D" gate="-1" pin="1"/>
-<pinref part="TT" gate="-1" pin="1"/>
+<pinref part="R_TÜR" gate="-1" pin="1"/>
+<pinref part="TÜR_TER." gate="-1" pin="1"/>
 <wire x1="162.56" y1="139.7" x2="187.96" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="139.7" x2="187.96" y2="127" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="127" x2="187.96" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="127" x2="187.96" y2="127" width="0.1524" layer="91"/>
 <junction x="187.96" y="127"/>
-<pinref part="AGND3" gate="VR1" pin="AGND"/>
+<pinref part="$1_7_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
 <pinref part="C1" gate="G$1" pin="-"/>
 <wire x1="195.58" y1="111.76" x2="195.58" y2="127" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="127" x2="187.96" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="L_V_T_O" gate="-6" pin="1"/>
-<pinref part="AGND4" gate="VR1" pin="AGND"/>
+<pinref part="L_TÜR" gate="-6" pin="1"/>
+<pinref part="$1_1_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
 <wire x1="22.86" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SV2" gate="1" pin="2"/>
-<wire x1="35.56" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="43.18" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="AGND5" gate="VR1" pin="AGND"/>
+<pinref part="$1_0_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
 <pinref part="SV2" gate="1" pin="8"/>
 <wire x1="35.56" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="27.94" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
-<junction x="17.78" y="43.18"/>
-</segment>
-<segment>
-<pinref part="Q2" gate="G$1" pin="S"/>
-<wire x1="119.38" y1="157.48" x2="119.38" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="AGND8" gate="VR1" pin="AGND"/>
+<wire x1="17.78" y1="27.94" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
+<wire x1="119.38" y1="157.48" x2="119.38" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="$1_4_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
+</segment>
+<segment>
+<pinref part="Q2" gate="G$1" pin="S"/>
 <wire x1="172.72" y1="157.48" x2="172.72" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="AGND9" gate="VR1" pin="AGND"/>
+<pinref part="$1_5_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
+</segment>
+<segment>
+<pinref part="$1_2_$_2019-11-26_22-56-04" gate="VR1" pin="AGND"/>
+<wire x1="33.02" y1="71.12" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="FREI" gate="-6" pin="1"/>
+<wire x1="33.02" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="$1_1_$_2019-11-26_22-56-01" gate="VR1" pin="AGND"/>
+<wire x1="48.26" y1="190.5" x2="55.88" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="190.5" x2="60.96" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="RANDOM" gate="-6" pin="1"/>
+<wire x1="55.88" y1="175.26" x2="55.88" y2="190.5" width="0.1524" layer="91"/>
+<junction x="55.88" y="190.5"/>
+<pinref part="RANDOM" gate="-5" pin="1"/>
+<wire x1="60.96" y1="175.26" x2="60.96" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A3" class="0">
 <segment>
-<pinref part="TT" gate="-2" pin="1"/>
+<pinref part="TÜR_TER." gate="-2" pin="1"/>
 <wire x1="162.56" y1="144.78" x2="165.1" y2="144.78" width="0.1524" layer="91"/>
 <label x="165.1" y="144.78" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -12648,7 +12621,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="A1" class="0">
 <segment>
-<pinref part="R_S_D" gate="-2" pin="1"/>
+<pinref part="R_TÜR" gate="-2" pin="1"/>
 <wire x1="162.56" y1="132.08" x2="165.1" y2="132.08" width="0.1524" layer="91"/>
 <label x="165.1" y="132.08" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -12660,9 +12633,9 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="00" class="0">
 <segment>
+<wire x1="35.56" y1="101.6" x2="33.02" y2="101.6" width="0.1524" layer="91"/>
+<label x="33.02" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="FREI" gate="-1" pin="1"/>
-<wire x1="35.56" y1="88.9" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
-<label x="33.02" y="88.9" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="0"/>
@@ -12672,9 +12645,9 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="01" class="0">
 <segment>
+<wire x1="35.56" y1="96.52" x2="33.02" y2="96.52" width="0.1524" layer="91"/>
+<label x="33.02" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="FREI" gate="-2" pin="1"/>
-<wire x1="35.56" y1="83.82" x2="33.02" y2="83.82" width="0.1524" layer="91"/>
-<label x="33.02" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="1"/>
@@ -12684,9 +12657,9 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="A4" class="0">
 <segment>
+<wire x1="35.56" y1="91.44" x2="33.02" y2="91.44" width="0.1524" layer="91"/>
+<label x="33.02" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="FREI" gate="-3" pin="1"/>
-<wire x1="35.56" y1="78.74" x2="33.02" y2="78.74" width="0.1524" layer="91"/>
-<label x="33.02" y="78.74" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="A4"/>
@@ -12696,9 +12669,9 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="A5" class="0">
 <segment>
+<wire x1="35.56" y1="86.36" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+<label x="33.02" y="86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="FREI" gate="-4" pin="1"/>
-<wire x1="35.56" y1="73.66" x2="33.02" y2="73.66" width="0.1524" layer="91"/>
-<label x="33.02" y="73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="A5"/>
@@ -12737,7 +12710,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <label x="160.02" y="35.56" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="L_V_T_O" gate="-3" pin="1"/>
+<pinref part="L_TÜR" gate="-3" pin="1"/>
 <wire x1="35.56" y1="134.62" x2="33.02" y2="134.62" width="0.1524" layer="91"/>
 <label x="33.02" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12756,7 +12729,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="A0" class="0">
 <segment>
-<pinref part="L_V_T_O" gate="-2" pin="1"/>
+<pinref part="L_TÜR" gate="-2" pin="1"/>
 <wire x1="35.56" y1="139.7" x2="33.02" y2="139.7" width="0.1524" layer="91"/>
 <label x="33.02" y="139.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12768,7 +12741,7 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 </net>
 <net name="A2" class="0">
 <segment>
-<pinref part="L_V_T_O" gate="-1" pin="1"/>
+<pinref part="L_TÜR" gate="-1" pin="1"/>
 <wire x1="35.56" y1="144.78" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
 <label x="33.02" y="144.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12953,48 +12926,31 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <pinref part="RANDOM" gate="-3" pin="1"/>
 </segment>
 </net>
-<net name="GND" class="0">
-<segment>
-<pinref part="24V" gate="-2" pin="KL"/>
-<wire x1="20.32" y1="165.1" x2="20.32" y2="175.26" width="0.1524" layer="91"/>
-<label x="20.32" y="175.26" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
-<wire x1="60.96" y1="175.26" x2="60.96" y2="177.8" width="0.1524" layer="91"/>
-<label x="60.96" y="177.8" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="RANDOM" gate="-5" pin="1"/>
-</segment>
-<segment>
-<wire x1="55.88" y1="175.26" x2="55.88" y2="177.8" width="0.1524" layer="91"/>
-<label x="55.88" y="177.8" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="RANDOM" gate="-6" pin="1"/>
-</segment>
-</net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="Q2" gate="G$1" pin="G"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
 <wire x1="109.22" y1="162.56" x2="111.76" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="Q1" gate="G$1" pin="G"/>
+<pinref part="Q2" gate="G$1" pin="G"/>
 <wire x1="162.56" y1="162.56" x2="165.1" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="POWER_LED" gate="-2" pin="1"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="172.72" y1="172.72" x2="172.72" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="SUMMER" gate="-2" pin="1"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="119.38" y1="172.72" x2="119.38" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13020,6 +12976,18 @@ Source: &lt;a href="https://www.onsemi.com/pub/Collateral/FDN5632N_F085-D.PDF"&g
 <pinref part="IC1" gate="G$1" pin="4"/>
 <wire x1="116.84" y1="106.68" x2="119.38" y2="106.68" width="0.1524" layer="91"/>
 <label x="119.38" y="106.68" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="GND24" class="0">
+<segment>
+<pinref part="SV2" gate="1" pin="2"/>
+<wire x1="35.56" y1="43.18" x2="33.02" y2="43.18" width="0.1524" layer="91"/>
+<label x="33.02" y="43.18" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="24V" gate="-2" pin="KL"/>
+<wire x1="20.32" y1="165.1" x2="20.32" y2="175.26" width="0.1524" layer="91"/>
+<label x="20.32" y="175.26" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>
