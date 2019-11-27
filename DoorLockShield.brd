@@ -102,10 +102,10 @@
 <text x="45" y="0.5" size="1.4224" layer="25">2B 2A 1A 1B</text>
 <wire x1="58" y1="0" x2="60" y2="2" width="0.1524" layer="20" curve="90"/>
 <wire x1="60" y1="2" x2="62" y2="4" width="0.1524" layer="20" curve="-90"/>
-<text x="11.75" y="0.5" size="1.4224" layer="25">G</text>
-<text x="15" y="0.5" size="1.4224" layer="25">4</text>
-<text x="17.25" y="0.5" size="1.4224" layer="25">10</text>
-<text x="8.5" y="0.5" size="1.4224" layer="25">A1</text>
+<text x="10.75" y="0.5" size="1.4224" layer="25">G</text>
+<text x="14" y="0.5" size="1.4224" layer="25">4</text>
+<text x="16.25" y="0.5" size="1.4224" layer="25">10</text>
+<text x="7.5" y="0.5" size="1.4224" layer="25">A1</text>
 <text x="-0.5" y="10.5" size="1.4224" layer="25">QC</text>
 <text x="-0.5" y="13" size="1.4224" layer="25">12</text>
 <text x="-0.5" y="15.5" size="1.4224" layer="25">11</text>
@@ -2237,13 +2237,13 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="48" y="25.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="52.2926" y="20.42" size="1.778" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R_TÜR" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="2POL254" package3d_urn="urn:adsk.eagle:package:9320/1" value="" x="11" y="5" smashed="yes" rot="R180">
-<attribute name="MF" value="" x="11" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="11" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="10.794" y="8.222" size="1.9304" layer="25" rot="R45"/>
-<attribute name="OC_FARNELL" value="unknown" x="11" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="11" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="13.794" y="8.048" size="1.27" layer="27" rot="R180"/>
+<element name="R_TÜR" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="2POL254" package3d_urn="urn:adsk.eagle:package:9320/1" value="" x="10" y="5" smashed="yes" rot="R180">
+<attribute name="MF" value="" x="10" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="10" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="9.794" y="8.222" size="1.9304" layer="25" rot="R45"/>
+<attribute name="OC_FARNELL" value="unknown" x="10" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="10" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="12.794" y="8.048" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="TÜR_TER." library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="2POL254" package3d_urn="urn:adsk.eagle:package:9320/1" value="" x="63.5" y="49" smashed="yes" rot="R270">
 <attribute name="MF" value="" x="63.5" y="49" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2253,13 +2253,13 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="unknown" x="63.5" y="49" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="60.452" y="51.794" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="L_TÜR" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="6POL254" package3d_urn="urn:adsk.eagle:package:9318/1" value="" x="14" y="58" smashed="yes">
-<attribute name="MF" value="" x="14" y="58" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="14" y="58" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="13.126" y="53.778" size="1.9304" layer="25" rot="R315"/>
-<attribute name="OC_FARNELL" value="unknown" x="14" y="58" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="14" y="58" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="6.126" y="54.952" size="1.27" layer="27"/>
+<element name="L_TÜR" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="6POL254" package3d_urn="urn:adsk.eagle:package:9318/1" value="" x="13" y="58" smashed="yes">
+<attribute name="MF" value="" x="13" y="58" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="13" y="58" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="12.126" y="53.778" size="1.9304" layer="25" rot="R315"/>
+<attribute name="OC_FARNELL" value="unknown" x="13" y="58" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="13" y="58" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="5.126" y="54.952" size="1.27" layer="27"/>
 </element>
 <element name="SV2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" package="MA08-1" package3d_urn="urn:adsk.eagle:package:8343/1" value="" x="27.5" y="31.2" smashed="yes">
 <attribute name="MF" value="" x="27.5" y="31.2" size="1.778" layer="27" display="off"/>
@@ -2327,13 +2327,13 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="5" y="50.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="5" y="50.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="ETH_SD" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="2POL254" package3d_urn="urn:adsk.eagle:package:9320/1" value="" x="17" y="5" smashed="yes" rot="R180">
-<attribute name="MF" value="" x="17" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="17" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="16.794" y="8.222" size="1.9304" layer="25" rot="R45"/>
-<attribute name="OC_FARNELL" value="unknown" x="17" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="17" y="5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="19.794" y="8.048" size="1.27" layer="27" rot="R180"/>
+<element name="ETH_SD" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="2POL254" package3d_urn="urn:adsk.eagle:package:9320/1" value="" x="16" y="5" smashed="yes" rot="R180">
+<attribute name="MF" value="" x="16" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="16" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="15.794" y="8.222" size="1.9304" layer="25" rot="R45"/>
+<attribute name="OC_FARNELL" value="unknown" x="16" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="16" y="5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="18.794" y="8.048" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="RANDOM" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" package="6POL254" package3d_urn="urn:adsk.eagle:package:9318/1" value="" x="63.5" y="21" smashed="yes" rot="R270">
 <attribute name="MF" value="" x="63.5" y="21" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2385,10 +2385,10 @@ design rules under a new name.</description>
 <contactref element="L_TÜR" pad="5"/>
 <contactref element="FREI" pad="5"/>
 <wire x1="5" y1="42.23" x2="11" y2="42.23" width="0.508" layer="1"/>
-<wire x1="15.27" y1="55" x2="15.27" y2="58" width="0.508" layer="1"/>
+<wire x1="14.27" y1="55" x2="14.27" y2="58" width="0.508" layer="1"/>
 <wire x1="11" y1="42.23" x2="11" y2="49.23" width="0.508" layer="1"/>
 <wire x1="11" y1="49.23" x2="11" y2="55" width="0.508" layer="1"/>
-<wire x1="11" y1="55" x2="15.27" y2="55" width="0.508" layer="1"/>
+<wire x1="11" y1="55" x2="14.27" y2="55" width="0.508" layer="1"/>
 <wire x1="5" y1="49.23" x2="11" y2="49.23" width="0.508" layer="1"/>
 <contactref element="C1" pad="+"/>
 <wire x1="48" y1="21.69" x2="63.5" y2="33.69" width="0" layer="19" extent="1-1"/>
@@ -2398,8 +2398,8 @@ design rules under a new name.</description>
 <wire x1="29.61" y1="45.81" x2="33.85" y2="31.2" width="0" layer="19" extent="1-1"/>
 <wire x1="44.85" y1="45.81" x2="29.61" y2="45.81" width="0" layer="19" extent="1-1"/>
 <wire x1="23.69" y1="18.96" x2="33.85" y2="31.2" width="0" layer="19" extent="1-1"/>
-<wire x1="17.81" y1="58" x2="29.61" y2="45.81" width="0" layer="19" extent="1-1"/>
-<wire x1="15.27" y1="58" x2="17.81" y2="58" width="0" layer="19" extent="1-1"/>
+<wire x1="16.81" y1="58" x2="29.61" y2="45.81" width="0" layer="19" extent="1-1"/>
+<wire x1="14.27" y1="58" x2="16.81" y2="58" width="0" layer="19" extent="1-1"/>
 <wire x1="5" y1="23.81" x2="5" y2="42.23" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="06_IN">
@@ -2431,8 +2431,8 @@ design rules under a new name.</description>
 <wire x1="37.23" y1="45.81" x2="47.39" y2="45.81" width="0" layer="19" extent="1-1"/>
 <wire x1="36.39" y1="31.2" x2="48" y2="29.31" width="0" layer="19" extent="1-1"/>
 <wire x1="26.416" y1="55.88" x2="37.23" y2="45.81" width="0" layer="19" extent="1-1"/>
-<wire x1="20.35" y1="58" x2="26.416" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="19.1" y1="46.05" x2="20.35" y2="58" width="0" layer="19" extent="16-16"/>
+<wire x1="19.35" y1="58" x2="26.416" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="19.1" y1="46.05" x2="19.35" y2="58" width="0" layer="19" extent="16-16"/>
 <wire x1="19.1" y1="40.05" x2="19.1" y2="46.05" width="0" layer="19" extent="16-16"/>
 <wire x1="5" y1="28.89" x2="19.1" y2="40.05" width="0" layer="19" extent="16-16"/>
 <wire x1="5" y1="26.35" x2="5" y2="28.89" width="0" layer="19" extent="1-1"/>
@@ -2440,7 +2440,7 @@ design rules under a new name.</description>
 <wire x1="63.5" y1="14.65" x2="63.5" y2="17.19" width="0" layer="19" extent="1-1"/>
 <wire x1="43.18" y1="7.62" x2="63.5" y2="14.65" width="0" layer="19" extent="1-1"/>
 <wire x1="40.64" y1="7.62" x2="43.18" y2="7.62" width="0" layer="19" extent="1-1"/>
-<wire x1="12.27" y1="5" x2="5" y2="26.35" width="0" layer="19" extent="1-1"/>
+<wire x1="11.27" y1="5" x2="5" y2="26.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TERRASSENTÜR">
 <contactref element="TÜR_TER." pad="2"/>
@@ -2450,7 +2450,7 @@ design rules under a new name.</description>
 <signal name="R_SCHALTER_TÜR">
 <contactref element="R_TÜR" pad="2"/>
 <contactref element="IC1" pad="8"/>
-<wire x1="9.73" y1="5" x2="53.34" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="8.73" y1="5" x2="53.34" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="00">
 <contactref element="IC1" pad="13"/>
@@ -2485,7 +2485,7 @@ design rules under a new name.</description>
 <signal name="RELAIS_SUMMER">
 <contactref element="IC2" pad="3"/>
 <contactref element="L_TÜR" pad="3"/>
-<wire x1="12.73" y1="58" x2="34.69" y2="38.19" width="0" layer="19" extent="1-1"/>
+<wire x1="11.73" y1="58" x2="34.69" y2="38.19" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="24V">
 <contactref element="SV2" pad="1"/>
@@ -2499,7 +2499,7 @@ design rules under a new name.</description>
 <signal name="SCHLIESS_Z_TÜR">
 <contactref element="L_TÜR" pad="2"/>
 <contactref element="IC1" pad="7"/>
-<wire x1="50.8" y1="7.62" x2="10.19" y2="58" width="0" layer="19" extent="1-1"/>
+<wire x1="50.8" y1="7.62" x2="9.19" y2="58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="2B">
 <contactref element="SV2" pad="3"/>
@@ -2596,12 +2596,12 @@ design rules under a new name.</description>
 <signal name="ETHERNET">
 <contactref element="ETH_SD" pad="1"/>
 <contactref element="IC1" pad="23"/>
-<wire x1="18.27" y1="5" x2="36.576" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="17.27" y1="5" x2="36.576" y2="55.88" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SS_SD">
 <contactref element="ETH_SD" pad="2"/>
 <contactref element="IC1" pad="17"/>
-<wire x1="15.73" y1="5" x2="53.34" y2="55.88" width="0" layer="19" extent="1-1"/>
+<wire x1="14.73" y1="5" x2="53.34" y2="55.88" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND24">
 <contactref element="SV2" pad="2"/>
@@ -2618,7 +2618,7 @@ design rules under a new name.</description>
 <signal name="TÜR_ZU_SCHALTER">
 <contactref element="L_TÜR" pad="1"/>
 <contactref element="IC1" pad="9"/>
-<wire x1="55.88" y1="7.62" x2="7.65" y2="58" width="0" layer="19" extent="1-1"/>
+<wire x1="55.88" y1="7.62" x2="6.65" y2="58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LED2_1_GRAU_S">
 <contactref element="RFID-LED" pad="2"/>
