@@ -8,7 +8,7 @@
 
 | Name | Info                                       |
 | ---- | ------------------------------------------ |
-| A0   | Schließzylinder Tatser                     |
+| A0   | Schließzylinder Tastser                    |
 | A1   | Read Schalter Tür                          |
 | A2   | Tür zu Schalter                            |
 | A3   | Terrassentür                               |
@@ -25,17 +25,17 @@
 | 8    | SN74HC595 SRCLK (Shift Register Clock Pin) |
 | 9    | SN74HC595 RCLK (Latch Pin)                 |
 | 10   | Ethernet                                   |
-| 11   | RFID                                       |
-| 12   | RFID                                       |
-| 13   | RFID                                       |
+| 11   | RFID (rot 2x schwarz markiert kl. Abstand) |
+| 12   | RFID (rot 1x schwarz)                      |
+| 13   | RFID (grün 1x schwarz)                     |
 
 # Pin Info SN74HC595
 
 | Name | Info                  |
 | ---- | --------------------- |
-| QA   | RFID LED1             |
-| QB   | RFID LED2             |
-| QC   | RFID LED3             |
+| QA   | RFID LED1 (grau 2 Striche)            |
+| QB   | RFID LED2 (grau einfacher Strich)            |
+| QC   | RFID LED3 (grau)      |
 | QD   | Relais Summer         |
 | QE   | Enable (Schrittmotor) |
 | QF   | Summer                |
