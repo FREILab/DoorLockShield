@@ -8,7 +8,7 @@
 
 | Name | Info                                       |
 | ---- | ------------------------------------------ |
-| A0   | Schließzylinder Tastser                    |
+| A0   | Schließzylinder Taster                    |
 | A1   | Read Schalter Tür                          |
 | A2   | Tür zu Schalter                            |
 | A3   | Terrassentür                               |
