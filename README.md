@@ -1,4 +1,43 @@
-# DoorLockShield
+# Door Lock Shield
 
-Here you will find our door shild
-=================================
+<p align="center"> 
+<img src="https://github.com/FREILab/DoorLockShield/blob/master/Pictures/DoorLockShield.png">
+</p>
+
+# Pin Info Arduino
+
+| Name | Info                                       |
+| ---- | ------------------------------------------ |
+| A0   | Schließzylinder Tatser                     |
+| A1   | Read Schalter Tür                          |
+| A2   | Tür zu Schalter                            |
+| A3   | Terrassentür                               |
+| A4   | **Freier Pin**                             |
+| A5   | **Freier Pin**                             |
+| 0    | **Freier Pin (Rx)**                        |
+| 1    | **Freier Pin (Tx)**                        |
+| 2    | STEP (Schrittmotor)                        |
+| 3    | DIR (Schrittmotor)                         |
+| 4    | SS für SD Karte                            |
+| 5    | RFID                                       |
+| 6    | Used for library is on Jumper              |
+| 7    | SN74HC595 SER (Serial Data Input)          |
+| 8    | SN74HC595 SRCLK (Shift Register Clock Pin) |
+| 9    | SN74HC595 RCLK (Latch Pin)                 |
+| 10   | Ethernet                                   |
+| 11   | RFID                                       |
+| 12   | RFID                                       |
+| 13   | RFID                                       |
+
+# Pin Info SN74HC595
+
+| Name | Info                  |
+| ---- | --------------------- |
+| QA   | RFID LED1             |
+| QB   | RFID LED2             |
+| QC   | RFID LED3             |
+| QD   | Relais Summer         |
+| QE   | Enable (Schrittmotor) |
+| QF   | Summer                |
+| QG   | Power LED             |
+| QH   | **Freier Pin**        |
