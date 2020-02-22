@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -91,7 +91,7 @@
 <text x="14" y="0.5" size="1.4224" layer="25">4</text>
 <text x="16.25" y="0.5" size="1.4224" layer="25">10</text>
 <text x="7.5" y="0.5" size="1.4224" layer="25">A1</text>
-<text x="-0.5" y="10.5" size="1.4224" layer="25">QC</text>
+<text x="-0.5" y="10.5" size="1.4224" layer="25">13</text>
 <text x="-0.5" y="13" size="1.4224" layer="25">12</text>
 <text x="-0.5" y="15.5" size="1.4224" layer="25">11</text>
 <text x="-0.5" y="18.25" size="1.4224" layer="25">06</text>
@@ -110,8 +110,8 @@
 <text x="8.25" y="61" size="1.4224" layer="25">A0</text>
 <text x="11.25" y="61" size="1.4224" layer="25">QD</text>
 <text x="14.5" y="61" size="1.4224" layer="25">5V</text>
-<text x="17.5" y="61" size="1.4224" layer="25">G</text>
-<text x="19.75" y="61" size="1.4224" layer="25">G</text>
+<text x="17.5" y="61" size="1.4224" layer="25">5V</text>
+<text x="20.75" y="61" size="1.4224" layer="25">G</text>
 <text x="65.75" y="14" size="1.4224" layer="25">G</text>
 <text x="65.75" y="16.5" size="1.4224" layer="25">G</text>
 <text x="65.75" y="19" size="1.4224" layer="25">5V</text>
