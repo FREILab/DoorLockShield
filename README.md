@@ -19,7 +19,7 @@
 | 2    | STEP (Schrittmotor)                        |
 | 3    | DIR (Schrittmotor)                         |
 | 4    | SS für SD Karte                            |
-| 5    | RFID                                       |
+| 5    | RFID (rot 2x schwarz markiert gr. Abstand) |
 | 6    | Used for library is on Jumper              |
 | 7    | SN74HC595 SER (Serial Data Input)          |
 | 8    | SN74HC595 SRCLK (Shift Register Clock Pin) |
