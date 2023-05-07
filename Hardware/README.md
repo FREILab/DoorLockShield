@@ -8,7 +8,7 @@ List of Parts
 
 | Description               | Link |
 | -----------               | ----------- |
-| 5V and 2V Power supply    | [Power Supply](https://www.netzgeraet.de/schaltnetzteile/schaltnetzteile-duo/7505/duo-netzteil-5v-24v-133w-2fach-ausgang-case-schaltnetzteil.html) |
+| 5V and 24V Power supply    | [Power Supply](https://www.netzgeraet.de/schaltnetzteile/schaltnetzteile-duo/7505/duo-netzteil-5v-24v-133w-2fach-ausgang-case-schaltnetzteil.html) |
 |                           | [Door Opener](https://manteca.de/Elektrischer-Tueroeffner-Typ-1420-RF-12-24V-AC/DC-/-Arbeitsstrom-/-Radiusfalle) | 
 |                           | [Drivebelt 1](https://www.zahnriemen24.de/a/40022-zahnriemen-5m-gt-gt3?breite=15&laenge=200&quantity=1)|
 |                           | [Drivebelt 2](https://www.zahnriemen24.de/a/40140-zahnscheiben-5m?zaehnezahl=12&riemenbreite=15&bohrung=1&vorbohrungspannsatz=1&quantity=1) |
