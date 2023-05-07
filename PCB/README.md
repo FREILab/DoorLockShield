@@ -1,7 +1,7 @@
 # Door Lock Shield
 
 <p align="center"> 
-<img src="https://github.com/FREILab/DoorLockShield/blob/master/Pictures/DoorLockShield.png">
+<img src="https://github.com/FREILab/DoorLockShield/blob/master/PCB/Pictures/DoorLockShield.png">
 </p>
 
 # Pin Info Arduino
