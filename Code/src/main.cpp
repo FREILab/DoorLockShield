@@ -52,8 +52,8 @@ IPAddress server(192,168,178,79);  // IP of Server(Raspberry Pi)
 EthernetClient client;
 
 // Stepper
-#define STEPPER_SPEED 1200
-#define STEPPER_ACCEL 2000
+#define STEPPER_SPEED 300
+#define STEPPER_ACCEL 1000
 #define STEPS_TO_OPEN 500
 #define STEPS_TO_CLOSE 500
 #define STEPS_MAX 2000
