@@ -52,10 +52,10 @@ IPAddress server(192,168,178,79);  // IP of Server(Raspberry Pi)
 EthernetClient client;
 
 // Stepper
-#define STEPPER_SPEED 300
-#define STEPPER_ACCEL 1000
-#define STEPS_TO_OPEN 500
-#define STEPS_TO_CLOSE 500
+#define STEPPER_SPEED 1200
+#define STEPPER_ACCEL 2000
+#define STEPS_TO_OPEN 1300
+#define STEPS_TO_CLOSE -1200
 #define STEPS_MAX 2000
 
 AccelStepper stepper(1, PIN_STEP, PIN_DIR);
@@ -130,6 +130,12 @@ void loop(void) {
     maintainCounter = 0;
     Ethernet.maintain();
   }
+    
+    // Close door if taster of door was pressed
+    if(digitalRead(TASTER_ABSCHLIESSEN) == 0) {
+      closeDoor();
+    }
+
   // Look for new cards 
   uint8_t success;
   uint8_t uid[] = { 0, 0, 0, 0, 0, 0, 0 };  // Buffer to store the returned UID
@@ -138,7 +144,7 @@ void loop(void) {
   // Wait for an ISO14443A type cards (Mifare, etc.).  When one is found
   // 'uid' will be populated with the UID, and uidLength will indicate
   // if the uid is 4 bytes (Mifare Classic) or 7 bytes (Mifare Ultralight)
-  success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength);
+  success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength, 100);
 
   if (success) {
     // Display some basic information about the card
@@ -165,21 +171,13 @@ void loop(void) {
   //Something is wrong with the check function
   char result = check(_uid);
 
-  closeDoor();
+  //closeDoor();
+  //Serial.println("TEST");
 
   srYellow = 0;
   updateSR();
   if (result == RFID_VALID) {
-    if (lastUid.equals(_uid)) {
-      retryCount++;
-    }
-    if (retryCount == 2) {
-      Serial.println("I will open the door");
       openDoor(true);
-    } else {
-      Serial.println("Card has not been recognized");
-      openDoor(false);
-    }
   } else if (result == RFID_INVALID){
     retryCount = 0;
     lastUid = "";
@@ -203,20 +201,30 @@ void loop(void) {
 
 void openDoor(boolean forceOpening) {
   if (digitalRead(TASTER_ENDSCHALTER) == 0 || forceOpening){
+    Serial.println("Will open door");
     srMotorEnable = 1;
     srGreen = 1;
     updateSR();
 
-    stepper.setSpeed(STEPPER_SPEED);
+    stepper.setSpeed(-STEPPER_SPEED);
     while(digitalRead(TASTER_ENDSCHALTER) == 0){
       stepper.runSpeed();
     }
+
+    Serial.println("Done checking TASTER_ENDSCHALTER");
+
     long pos = stepper.currentPosition();
 
-    while(stepper.currentPosition() - pos < STEPS_TO_OPEN){
+    while(stepper.currentPosition() + pos > STEPS_TO_OPEN){
+      Serial.println(stepper.currentPosition() + pos);
+      //Serial.println(stepper.currentPosition());
       stepper.runSpeed();
     }
-    stepper.setSpeed(0);
+    Serial.println(stepper.currentPosition() + pos);
+    //Serial.println(pos);
+    //Serial.println(stepper.currentPosition());
+
+    //stepper.setSpeed(0);
           
     srMotorEnable = 0;
     updateSR();
@@ -233,7 +241,9 @@ void openDoor(boolean forceOpening) {
 void closeDoor() {
   lastUid = "";
   retryCount = 0;
-  while (digitalRead(TASTER_REED));
+
+  //check if door is closed
+  while (digitalRead(TASTER_REED) == 0);
   delay(2000);
   
   srMotorEnable = 1;
@@ -243,16 +253,24 @@ void closeDoor() {
   updateSR();
 
   long posStart = stepper.currentPosition();
-  stepper.setSpeed(-STEPPER_SPEED);
+  stepper.setSpeed(STEPPER_SPEED);
   while(digitalRead(TASTER_ENDSCHALTER) == 1 && posStart - stepper.currentPosition() < STEPS_MAX){
     stepper.runSpeed();
   }
 
-  long pos = stepper.currentPosition();
+  Serial.println(posStart - stepper.currentPosition());
 
-  while(pos - stepper.currentPosition() < STEPS_TO_CLOSE){
+  long pos = stepper.currentPosition();
+  Serial.println("Will start to close door ...");
+  Serial.println(pos + stepper.currentPosition());
+
+
+  while(pos + stepper.currentPosition() < -STEPS_TO_CLOSE){
+    //Serial.println(pos + stepper.currentPosition());
     stepper.runSpeed();
   }
+
+  Serial.println(pos + stepper.currentPosition());
 
   srMotorEnable = 0;
   srGreen = 0;
@@ -294,9 +312,6 @@ char check(String rfid) {
     client.println("Connection: close");
     client.println();
 
-    // here for testing
-    return RFID_VALID;
-
     // read response
     int numCr = 0;
     String message = "";
@@ -328,8 +343,25 @@ char check(String rfid) {
 }
 
 void updateSR() {
+  uint8_t outputs = 0;
+  if (!srMotorEnable)  outputs |= 1 << 3;
+  if (srSummer)       outputs |= 1 << 2;
+  if (srGreen)        outputs |= 1 << 5;
+  if (srYellow)       outputs |= 1 << 6;
+  if (srRed)          outputs |= 1 << 7;
+  //if (srSummer)       outputs |= 1 << 5;
+
   digitalWrite(SRCLK, LOW);
   digitalWrite(RCLK, LOW);
+
+  for (uint8_t i = 0; i < 8; ++i)
+  {
+    digitalWrite(SER, ((outputs >> i) & 0x01) ? HIGH : LOW);
+    digitalWrite(SRCLK, HIGH);
+    digitalWrite(SRCLK, LOW);
+  }
+
+  /*
   
   if (srMotorEnable == 1){
     digitalWrite(SER, LOW);
@@ -371,6 +403,16 @@ void updateSR() {
   digitalWrite(SRCLK, HIGH);
   digitalWrite(SRCLK, LOW);
 
+  if (srSummer == 0){
+    digitalWrite(SER, HIGH);
+  } else {
+    digitalWrite(SER, LOW);
+  }
+
+  digitalWrite(SRCLK, HIGH);
+  digitalWrite(SRCLK, LOW);
+  */
   digitalWrite(RCLK, HIGH);
   digitalWrite(RCLK, LOW);
+  
 }
