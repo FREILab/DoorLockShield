@@ -52,10 +52,10 @@ IPAddress server(192,168,178,79);  // IP of Server(Raspberry Pi)
 EthernetClient client;
 
 // Stepper
-#define STEPPER_SPEED 1200
-#define STEPPER_ACCEL 2000
-#define STEPS_TO_OPEN 2200
-#define STEPS_TO_CLOSE -1200
+#define STEPPER_SPEED 800
+#define STEPPER_ACCEL 1000
+#define STEPS_TO_OPEN 900 //2200
+#define STEPS_TO_CLOSE 1200
 #define STEPS_MAX 2000
 
 AccelStepper stepper(1, PIN_STEP, PIN_DIR);
@@ -167,14 +167,11 @@ void loop(void) {
     }
   
   }
-  Serial.println("+++++++++++++++++++++");
-  Serial.println(_uid);  
-  Serial.println("+++++++++++++++++++++");
+  //Serial.println("+++++++++++++++++++++");
+  //Serial.println(_uid);  
+  //Serial.println("+++++++++++++++++++++");
   //Something is wrong with the check function
   char result = check(_uid);
-
-  //closeDoor();
-  //Serial.println("TEST");
 
   srYellow = 0;
   updateSR();
@@ -192,13 +189,15 @@ void loop(void) {
     // ...
   }
   lastUid = _uid;
-  //mfrc522.PCD_Init(); 
   }
 
     
 }
 
 void openDoor(boolean forceOpening) {
+
+  //Serial.println(digitalRead(TASTER_ENDSCHALTER));
+
   if (digitalRead(TASTER_ENDSCHALTER) == 0 || forceOpening){
     Serial.println("Will open door");
     srMotorEnable = 1;
@@ -206,29 +205,33 @@ void openDoor(boolean forceOpening) {
     updateSR();
 
     stepper.setSpeed(-STEPPER_SPEED);
+    Serial.println(abs(stepper.currentPosition()));
     while(digitalRead(TASTER_ENDSCHALTER) == 0){
       stepper.runSpeed();
-    }
-
-    Serial.println("Done checking TASTER_ENDSCHALTER");
-
-    long pos = stepper.currentPosition();
-
-    while(stepper.currentPosition() + pos > STEPS_TO_OPEN){
-      Serial.println("HERE");
-      Serial.println(stepper.currentPosition() + pos);
-      Serial.println(pos);
-  
-      //Serial.println(stepper.currentPosition());
+      delay(5);
       stepper.runSpeed();
+      delay(5);
+      if(abs(stepper.currentPosition()) > STEPS_TO_OPEN){
+        Serial.println("Force of Motor not Enough");
+        srMotorEnable = 0;
+        Serial.println(abs(stepper.currentPosition()));
+        srGreen = 1;
+        srYellow = 1;
+        srRed = 1;
+        delay(1000);
+        srGreen = 0;
+        srYellow = 0;
+        updateSR();
+        stepper.setCurrentPosition(0);
+        return;
+      }
     }
-    Serial.println("HERE2");
-    Serial.println(stepper.currentPosition() + pos);
-    //Serial.println(pos);
-    //Serial.println(stepper.currentPosition());
 
-    //stepper.setSpeed(0);
-          
+    while(abs(stepper.currentPosition()) < STEPS_TO_OPEN){
+      stepper.runSpeed();
+      //Serial.println(stepper.currentPosition());
+    }
+         
     srMotorEnable = 0;
     updateSR();
   }
@@ -247,6 +250,7 @@ void closeDoor() {
 
   //check if door is closed
   while (digitalRead(TASTER_REED) == 0);
+  Serial.println("Will close door");
   delay(2000);
   
   srMotorEnable = 1;
@@ -255,21 +259,19 @@ void closeDoor() {
   srRed = 1;
   updateSR();
 
-  long posStart = stepper.currentPosition();
+  stepper.setCurrentPosition(0);
+
   stepper.setSpeed(STEPPER_SPEED);
-  while(digitalRead(TASTER_ENDSCHALTER) == 1 && posStart - stepper.currentPosition() < STEPS_MAX){
+  //Serial.println(digitalRead(TASTER_ENDSCHALTER));
+  while(digitalRead(TASTER_ENDSCHALTER) == 1 ){
     stepper.runSpeed();
-  }
-
-  Serial.println(posStart - stepper.currentPosition());
-
-  long pos = stepper.currentPosition();
-  Serial.println("Will start to close door ...");
-  Serial.println(pos + stepper.currentPosition());
-
-
-  while(pos + stepper.currentPosition() < -STEPS_TO_CLOSE){
-    stepper.runSpeed();
+    //Serial.println(digitalRead(TASTER_ENDSCHALTER));
+    if (stepper.currentPosition() > STEPS_MAX){
+        Serial.println("Motor Moved to far");
+        srMotorEnable = 0;
+        updateSR();
+        return;
+    }
   }
 
   srMotorEnable = 0;
@@ -361,57 +363,6 @@ void updateSR() {
     digitalWrite(SRCLK, LOW);
   }
 
-  /*
-  
-  if (srMotorEnable == 1){
-    digitalWrite(SER, LOW);
-  } else {
-    digitalWrite(SER, HIGH);
-  }
-  digitalWrite(SRCLK, HIGH);
-  digitalWrite(SRCLK, LOW);
-
-  if (srSummer == 0){
-    digitalWrite(SER, HIGH);
-  } else {
-    digitalWrite(SER, LOW);
-  }
-  digitalWrite(SRCLK, HIGH);
-  digitalWrite(SRCLK, LOW);
-
-  if (srGreen == 0){
-    digitalWrite(SER, HIGH);
-  } else {
-    digitalWrite(SER, LOW);
-  }
-  digitalWrite(SRCLK, HIGH);
-  digitalWrite(SRCLK, LOW);
-
-  if (srYellow == 0){
-    digitalWrite(SER, HIGH);
-  } else {
-    digitalWrite(SER, LOW);
-  }
-  digitalWrite(SRCLK, HIGH);
-  digitalWrite(SRCLK, LOW);
-
-  if (srRed == 0){
-    digitalWrite(SER, HIGH);
-  } else {
-    digitalWrite(SER, LOW);
-  }
-  digitalWrite(SRCLK, HIGH);
-  digitalWrite(SRCLK, LOW);
-
-  if (srSummer == 0){
-    digitalWrite(SER, HIGH);
-  } else {
-    digitalWrite(SER, LOW);
-  }
-
-  digitalWrite(SRCLK, HIGH);
-  digitalWrite(SRCLK, LOW);
-  */
   digitalWrite(RCLK, HIGH);
   digitalWrite(RCLK, LOW);
   
