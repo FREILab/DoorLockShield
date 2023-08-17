@@ -54,7 +54,7 @@ EthernetClient client;
 // Stepper
 #define STEPPER_SPEED 1200
 #define STEPPER_ACCEL 2000
-#define STEPS_TO_OPEN 1300
+#define STEPS_TO_OPEN 2200
 #define STEPS_TO_CLOSE -1200
 #define STEPS_MAX 2000
 
@@ -62,6 +62,7 @@ AccelStepper stepper(1, PIN_STEP, PIN_DIR);
 
 String lastUid;
 int retryCount = 0;
+int offset = 0;
 
 char check(String rfid);
 void updateSR();
@@ -125,6 +126,7 @@ void setup(void) {
 
 int maintainCounter = 0;
 void loop(void) {
+  // Serial.println(digitalRead(TASTER_ENDSCHALTER)); Test Limit Switch
   maintainCounter++;
   if (maintainCounter >= 6000) {
     maintainCounter = 0;
@@ -166,7 +168,7 @@ void loop(void) {
   
   }
   Serial.println("+++++++++++++++++++++");
-  Serial.println(_uid);
+  Serial.println(_uid);  
   Serial.println("+++++++++++++++++++++");
   //Something is wrong with the check function
   char result = check(_uid);
@@ -191,9 +193,6 @@ void loop(void) {
   }
   lastUid = _uid;
   //mfrc522.PCD_Init(); 
-
-
-  
   }
 
     
@@ -216,10 +215,14 @@ void openDoor(boolean forceOpening) {
     long pos = stepper.currentPosition();
 
     while(stepper.currentPosition() + pos > STEPS_TO_OPEN){
+      Serial.println("HERE");
       Serial.println(stepper.currentPosition() + pos);
+      Serial.println(pos);
+  
       //Serial.println(stepper.currentPosition());
       stepper.runSpeed();
     }
+    Serial.println("HERE2");
     Serial.println(stepper.currentPosition() + pos);
     //Serial.println(pos);
     //Serial.println(stepper.currentPosition());
@@ -266,11 +269,8 @@ void closeDoor() {
 
 
   while(pos + stepper.currentPosition() < -STEPS_TO_CLOSE){
-    //Serial.println(pos + stepper.currentPosition());
     stepper.runSpeed();
   }
-
-  Serial.println(pos + stepper.currentPosition());
 
   srMotorEnable = 0;
   srGreen = 0;
